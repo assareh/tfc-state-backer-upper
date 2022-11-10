@@ -58,7 +58,6 @@ resource "aws_lambda_function" "webhook" {
   runtime                 = "python3.7"
   layers                  = ["arn:aws:lambda:${var.region}:634166935893:layer:vault-lambda-extension:14"]
 
-
   s3_bucket = aws_s3_bucket.webhook.bucket
   s3_key    = aws_s3_object.webhook.id
 
